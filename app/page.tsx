@@ -43,7 +43,7 @@ export default function Portfolio() {
               <h1 className="text-5xl font-bold mb-4">Mupparaju Hemanth Kumar</h1>
               <p className="text-xl text-blue-100 mb-6">Aspiring Data Science Professional</p>
               <p className="text-lg text-blue-50 max-w-2xl mx-auto leading-relaxed">
-                B.Tech AI & Data Science Student | Python Developer | Cloud Enthusiast
+                B.Tech AI &amp; Data Science Student | Python Developer 
               </p>
             </div>
 
@@ -415,7 +415,7 @@ export default function Portfolio() {
               <Card className="hover:shadow-lg transition-shadow text-center">
                 <CardContent className="p-6">
                   <Cloud className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-                  <h3 className="font-semibold text-lg text-gray-900">Associate Cloud Engineer</h3>
+                  <h3 className="font-semibold text-lg text-gray-900">Google cloud: Associate Cloud Engineer </h3>
                 </CardContent>
               </Card>
             </div>
