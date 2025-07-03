@@ -2,7 +2,7 @@
 
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import {
   Mail,
   Phone,
@@ -115,14 +115,14 @@ export default function Portfolio() {
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Career Objective</h2>
             </div>
             <Card className="border-l-4 border-l-blue-600">
-              <CardContent className="p-8">
+              <div className="p-8">
                 <p className="text-lg text-gray-700 leading-relaxed">
                   Aspiring data science professional seeking to leverage my knowledge and skills in Python, databases,
                   and data analytics to solve real-world problems. Eager to contribute to innovative projects, gain
                   practical experience, and grow in a dynamic organization that fosters learning and professional
                   development.
                 </p>
-              </CardContent>
+              </div>
             </Card>
           </div>
         </div>
@@ -154,12 +154,12 @@ export default function Portfolio() {
                     </Badge>
                   </div>
                 </CardHeader>
-                <CardContent>
+                <div className="p-6 pt-0">
                   <div className="flex items-center gap-2">
                     <Award className="w-5 h-5 text-green-600" />
                     <span className="font-semibold text-green-600">CGPA: 9.27</span>
                   </div>
-                </CardContent>
+                </div>
               </Card>
 
               <Card className="hover:shadow-lg transition-shadow">
@@ -176,12 +176,12 @@ export default function Portfolio() {
                     </Badge>
                   </div>
                 </CardHeader>
-                <CardContent>
+                <div className="p-6 pt-0">
                   <div className="flex items-center gap-2">
                     <Award className="w-5 h-5 text-green-600" />
                     <span className="font-semibold text-green-600">Percentage: 88%</span>
                   </div>
-                </CardContent>
+                </div>
               </Card>
 
               <Card className="hover:shadow-lg transition-shadow">
@@ -196,12 +196,12 @@ export default function Portfolio() {
                     </Badge>
                   </div>
                 </CardHeader>
-                <CardContent>
+                <div className="p-6 pt-0">
                   <div className="flex items-center gap-2">
                     <Award className="w-5 h-5 text-green-600" />
                     <span className="font-semibold text-green-600">CGPA: 9.7</span>
                   </div>
-                </CardContent>
+                </div>
               </Card>
             </div>
           </div>
@@ -223,7 +223,7 @@ export default function Portfolio() {
                   <Code className="w-8 h-8 text-blue-600 mx-auto mb-2" />
                   <CardTitle className="text-lg">Languages</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <div className="p-6 pt-0">
                   <div className="flex flex-wrap gap-2">
                     {["Python", "Java", "HTML", "CSS", "JavaScript"].map((skill) => (
                       <Badge key={skill} variant="outline">
@@ -231,7 +231,7 @@ export default function Portfolio() {
                       </Badge>
                     ))}
                   </div>
-                </CardContent>
+                </div>
               </Card>
 
               <Card className="hover:shadow-lg transition-shadow">
@@ -239,7 +239,7 @@ export default function Portfolio() {
                   <Database className="w-8 h-8 text-green-600 mx-auto mb-2" />
                   <CardTitle className="text-lg">Databases</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <div className="p-6 pt-0">
                   <div className="flex flex-wrap gap-2">
                     {["SQL", "MongoDB"].map((skill) => (
                       <Badge key={skill} variant="outline">
@@ -247,7 +247,7 @@ export default function Portfolio() {
                       </Badge>
                     ))}
                   </div>
-                </CardContent>
+                </div>
               </Card>
 
               <Card className="hover:shadow-lg transition-shadow">
@@ -255,7 +255,7 @@ export default function Portfolio() {
                   <Cloud className="w-8 h-8 text-purple-600 mx-auto mb-2" />
                   <CardTitle className="text-lg">Developer Tools</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <div className="p-6 pt-0">
                   <div className="flex flex-wrap gap-2">
                     {["Git", "AWS"].map((skill) => (
                       <Badge key={skill} variant="outline">
@@ -263,7 +263,7 @@ export default function Portfolio() {
                       </Badge>
                     ))}
                   </div>
-                </CardContent>
+                </div>
               </Card>
 
               <Card className="hover:shadow-lg transition-shadow">
@@ -271,7 +271,7 @@ export default function Portfolio() {
                   <BookOpen className="w-8 h-8 text-orange-600 mx-auto mb-2" />
                   <CardTitle className="text-lg">Additional Skills</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <div className="p-6 pt-0">
                   <div className="flex flex-wrap gap-2">
                     {["Tableau", "Power BI", "Excel"].map((skill) => (
                       <Badge key={skill} variant="outline">
@@ -279,7 +279,7 @@ export default function Portfolio() {
                       </Badge>
                     ))}
                   </div>
-                </CardContent>
+                </div>
               </Card>
             </div>
           </div>
@@ -307,7 +307,7 @@ export default function Portfolio() {
                     <span>4 months duration</span>
                   </div>
                 </CardHeader>
-                <CardContent>
+                <div className="p-6 pt-0">
                   <div className="space-y-4">
                     <div className="flex flex-wrap gap-2 mb-4">
                       <Badge variant="outline">PHP</Badge>
@@ -341,7 +341,7 @@ export default function Portfolio() {
                       </a>
                     </Button>
                   </div>
-                </CardContent>
+                </div>
               </Card>
 
               <Card className="hover:shadow-lg transition-shadow">
@@ -355,7 +355,7 @@ export default function Portfolio() {
                     <span>4 months duration</span>
                   </div>
                 </CardHeader>
-                <CardContent>
+                <div className="p-6 pt-0">
                   <div className="space-y-4">
                     <div className="flex flex-wrap gap-2 mb-4">
                       <Badge variant="outline">RESTful API</Badge>
@@ -388,7 +388,7 @@ export default function Portfolio() {
                       </a>
                     </Button>
                   </div>
-                </CardContent>
+                </div>
               </Card>
             </div>
           </div>
@@ -406,7 +406,7 @@ export default function Portfolio() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Card className="hover:shadow-lg transition-shadow text-center">
-                <CardContent className="p-6">
+                <div className="p-6">
                   <Code className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                   <h3 className="font-semibold text-lg text-gray-900">Python for Data Science</h3>
                   <p className="text-sm text-gray-600 mb-4">Certified by IBM</p>
@@ -424,45 +424,27 @@ export default function Portfolio() {
                     <Certificate className="w-4 h-4" />
                     View Certificate
                   </Button>
-                </CardContent>
+                </div>
               </Card>
 
               <Card className="hover:shadow-lg transition-shadow text-center">
-                <CardContent className="p-6">
-                  <Database className="w-12 h-12 text-green-600 mx-auto mb-4" />
-                  <h3 className="font-semibold text-lg text-gray-900">Additional IBM Certification</h3>
-                  <p className="text-sm text-gray-600 mb-4">Certified by IBM</p>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="mt-4 gap-2 bg-transparent"
-                    onClick={() =>
-                      window.open(
-                        "https://www.credly.com/badges/4bca8c3c-1bb7-49c3-8649-fc6a469639c9/public_url",
-                        "_blank",
-                      )
-                    }
-                  >
-                    <Certificate className="w-4 h-4" />
-                    View Certificate
-                  </Button>
-                </CardContent>
+                
               </Card>
 
               <Card className="hover:shadow-lg transition-shadow text-center">
-                <CardContent className="p-6">
+                <div className="p-6">
                   <Cloud className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                   <h3 className="font-semibold text-lg text-gray-900">
                     Microsoft Certified: Azure Developer Associate
                   </h3>
-                </CardContent>
+                </div>
               </Card>
 
               <Card className="hover:shadow-lg transition-shadow text-center">
-                <CardContent className="p-6">
+                <div className="p-6">
                   <Cloud className="w-12 h-12 text-purple-600 mx-auto mb-4" />
                   <h3 className="font-semibold text-lg text-gray-900">Google cloud: Associate Cloud Engineer </h3>
-                </CardContent>
+                </div>
               </Card>
             </div>
           </div>
@@ -484,13 +466,13 @@ export default function Portfolio() {
                 { name: "AWS Academy Machine Learning", icon: Code, color: "text-blue-600" },
               ].map((internship, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6 flex items-center gap-4">
+                  <div className="p-6 flex items-center gap-4">
                     <internship.icon className={`w-12 h-12 ${internship.color}`} />
                     <div>
                       <h3 className="font-semibold text-lg text-gray-900">{internship.name}</h3>
                       <p className="text-gray-600">Amazon Web Services</p>
                     </div>
-                  </CardContent>
+                  </div>
                 </Card>
               ))}
             </div>
@@ -514,10 +496,10 @@ export default function Portfolio() {
                 { name: "Time Management", icon: Clock, color: "text-purple-600" },
               ].map((skill, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow text-center">
-                  <CardContent className="p-6">
+                  <div className="p-6">
                     <skill.icon className={`w-12 h-12 ${skill.color} mx-auto mb-4`} />
                     <h3 className="font-semibold text-lg text-gray-900">{skill.name}</h3>
-                  </CardContent>
+                  </div>
                 </Card>
               ))}
             </div>
@@ -536,33 +518,33 @@ export default function Portfolio() {
 
             <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <Card className="bg-white/10 border-white/20 text-white hover:bg-white/20 transition-colors cursor-pointer">
-                <CardContent className="p-6 text-center">
+                <div className="p-6 text-center">
                   <a href="mailto:hemanth1672535@gmail.com" className="block">
                     <Mail className="w-8 h-8 mx-auto mb-4" />
                     <h3 className="font-semibold mb-2">Personal Email</h3>
                     <p className="text-blue-100 hover:text-white transition-colors">hemanth1672535@gmail.com</p>
                   </a>
-                </CardContent>
+                </div>
               </Card>
 
               <Card className="bg-white/10 border-white/20 text-white hover:bg-white/20 transition-colors cursor-pointer">
-                <CardContent className="p-6 text-center">
+                <div className="p-6 text-center">
                   <a href="mailto:2100080119ai.ds@gmail.com" className="block">
                     <Mail className="w-8 h-8 mx-auto mb-4" />
                     <h3 className="font-semibold mb-2">Academic Email</h3>
                     <p className="text-blue-100 hover:text-white transition-colors">2100080119ai.ds@gmail.com</p>
                   </a>
-                </CardContent>
+                </div>
               </Card>
 
               <Card className="bg-white/10 border-white/20 text-white hover:bg-white/20 transition-colors cursor-pointer">
-                <CardContent className="p-6 text-center">
+                <div className="p-6 text-center">
                   <a href="tel:+919391941256" className="block">
                     <Phone className="w-8 h-8 mx-auto mb-4" />
                     <h3 className="font-semibold mb-2">Phone</h3>
                     <p className="text-blue-100 hover:text-white transition-colors">+91-9391941256</p>
                   </a>
-                </CardContent>
+                </div>
               </Card>
             </div>
 
