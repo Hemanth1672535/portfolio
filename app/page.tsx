@@ -40,7 +40,12 @@ export default function Portfolio() {
                   className="w-32 h-32 rounded-full object-cover border-4 border-white/30 shadow-lg"
                 />
               </div>
-              <h1 className="text-5xl font-bold mb-4">Mupparaju Hemanth Kumar</h1>
+              <h1
+                className="text-4xl font-extrabold mb-4 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent tracking-wide"
+                style={{ fontFamily: "'Bookman', serif" }}
+              >
+                Mupparaju Hemanth Kumar
+              </h1>
               <p className="text-xl text-blue-100 mb-6">Aspiring Data Science Professional</p>
               <p className="text-lg text-blue-50 max-w-2xl mx-auto leading-relaxed">
                 B.Tech AI &amp; Data Science Student | Python Developer
