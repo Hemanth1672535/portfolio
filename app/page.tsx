@@ -1,3 +1,5 @@
+"use client"
+
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -390,18 +392,32 @@ export default function Portfolio() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">
-              {[
-                { name: "Python for Data Science", icon: Code, color: "text-blue-600" },
-                { name: "Microsoft Certified: Azure Developer Associate", icon: Cloud, color: "text-green-600" },
-                { name: "Associate Cloud Engineer", icon: Cloud, color: "text-purple-600" },
-              ].map((cert, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow text-center">
-                  <CardContent className="p-6">
-                    <cert.icon className={`w-12 h-12 ${cert.color} mx-auto mb-4`} />
-                    <h3 className="font-semibold text-lg text-gray-900">{cert.name}</h3>
-                  </CardContent>
-                </Card>
-              ))}
+              <Card
+                className="hover:shadow-lg transition-shadow text-center cursor-pointer"
+                onClick={() => window.open("/certificates/python-data-science.pdf", "_blank")}
+              >
+                <CardContent className="p-6">
+                  <Code className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                  <h3 className="font-semibold text-lg text-gray-900">Python for Data Science</h3>
+                  <p className="text-sm text-gray-600 mt-2">Click to view certificate</p>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-shadow text-center">
+                <CardContent className="p-6">
+                  <Cloud className="w-12 h-12 text-green-600 mx-auto mb-4" />
+                  <h3 className="font-semibold text-lg text-gray-900">
+                    Microsoft Certified: Azure Developer Associate
+                  </h3>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-shadow text-center">
+                <CardContent className="p-6">
+                  <Cloud className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+                  <h3 className="font-semibold text-lg text-gray-900">Associate Cloud Engineer</h3>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
