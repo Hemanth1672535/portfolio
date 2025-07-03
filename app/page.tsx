@@ -45,22 +45,50 @@ export default function Portfolio() {
               </p>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-4 mt-8">
-              <Button variant="secondary" size="lg" className="gap-2">
-                <Mail className="w-4 h-4" />
-                hemanth1672535@gmail.com
+            <div className="flex flex-wrap justify-center gap-6 mt-8">
+              <Button
+                variant="secondary"
+                size="lg"
+                className="gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-lg"
+                asChild
+              >
+                <a href="mailto:hemanth1672535@gmail.com">
+                  <Mail className="w-5 h-5" />
+                  hemanth1672535@gmail.com
+                </a>
               </Button>
-              <Button variant="secondary" size="lg" className="gap-2">
-                <Phone className="w-4 h-4" />
-                +91-9391941256
+              <Button
+                variant="secondary"
+                size="lg"
+                className="gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-lg"
+                asChild
+              >
+                <a href="tel:+919391941256">
+                  <Phone className="w-5 h-5" />
+                  +91-9391941256
+                </a>
               </Button>
-              <Button variant="secondary" size="lg" className="gap-2">
-                <Github className="w-4 h-4" />
-                GitHub
+              <Button
+                variant="secondary"
+                size="lg"
+                className="gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-lg"
+                asChild
+              >
+                <a href="https://github.com/hemanth1672535" target="_blank" rel="noopener noreferrer">
+                  <Github className="w-5 h-5" />
+                  GitHub
+                </a>
               </Button>
-              <Button variant="secondary" size="lg" className="gap-2">
-                <Linkedin className="w-4 h-4" />
-                LinkedIn
+              <Button
+                variant="secondary"
+                size="lg"
+                className="gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-lg"
+                asChild
+              >
+                <a href="https://www.linkedin.com/in/hemanth-kumar-mupparaju" target="_blank" rel="noopener noreferrer">
+                  <Linkedin className="w-5 h-5" />
+                  LinkedIn
+                </a>
               </Button>
             </div>
           </div>
@@ -291,9 +319,11 @@ export default function Portfolio() {
                         </span>
                       </li>
                     </ul>
-                    <Button variant="outline" size="sm" className="gap-2 bg-transparent">
-                      <Github className="w-4 h-4" />
-                      View Repository
+                    <Button variant="outline" size="sm" className="gap-2 bg-transparent" asChild>
+                      <a href="https://github.com/hemanth1672535" target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4" />
+                        View Repository
+                      </a>
                     </Button>
                   </div>
                 </CardContent>
@@ -332,9 +362,11 @@ export default function Portfolio() {
                         </span>
                       </li>
                     </ul>
-                    <Button variant="outline" size="sm" className="gap-2 bg-transparent">
-                      <Github className="w-4 h-4" />
-                      View Repository
+                    <Button variant="outline" size="sm" className="gap-2 bg-transparent" asChild>
+                      <a href="https://github.com/hemanth1672535" target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4" />
+                        View Repository
+                      </a>
                     </Button>
                   </div>
                 </CardContent>
@@ -437,32 +469,40 @@ export default function Portfolio() {
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-              <Card className="bg-white/10 border-white/20 text-white">
+              <Card className="bg-white/10 border-white/20 text-white hover:bg-white/20 transition-colors cursor-pointer">
                 <CardContent className="p-6 text-center">
-                  <Mail className="w-8 h-8 mx-auto mb-4" />
-                  <h3 className="font-semibold mb-2">Email</h3>
-                  <p className="text-blue-100">hemanth1672535@gmail.com</p>
-                  <p className="text-blue-100">#2100080119ai.ds@gmail.com</p>
+                  <a href="mailto:hemanth1672535@gmail.com" className="block">
+                    <Mail className="w-8 h-8 mx-auto mb-4" />
+                    <h3 className="font-semibold mb-2">Email</h3>
+                    <p className="text-blue-100 hover:text-white transition-colors">hemanth1672535@gmail.com</p>
+                    <p className="text-blue-100 hover:text-white transition-colors">#2100080119ai.ds@gmail.com</p>
+                  </a>
                 </CardContent>
               </Card>
 
-              <Card className="bg-white/10 border-white/20 text-white">
+              <Card className="bg-white/10 border-white/20 text-white hover:bg-white/20 transition-colors cursor-pointer">
                 <CardContent className="p-6 text-center">
-                  <Phone className="w-8 h-8 mx-auto mb-4" />
-                  <h3 className="font-semibold mb-2">Phone</h3>
-                  <p className="text-blue-100">+91-9391941256</p>
+                  <a href="tel:+919391941256" className="block">
+                    <Phone className="w-8 h-8 mx-auto mb-4" />
+                    <h3 className="font-semibold mb-2">Phone</h3>
+                    <p className="text-blue-100 hover:text-white transition-colors">+91-9391941256</p>
+                  </a>
                 </CardContent>
               </Card>
             </div>
 
             <div className="flex justify-center gap-4 mt-8">
-              <Button variant="secondary" size="lg" className="gap-2">
-                <Github className="w-5 h-5" />
-                GitHub Profile
+              <Button variant="secondary" size="lg" className="gap-2" asChild>
+                <a href="https://github.com/hemanth1672535" target="_blank" rel="noopener noreferrer">
+                  <Github className="w-5 h-5" />
+                  GitHub Profile
+                </a>
               </Button>
-              <Button variant="secondary" size="lg" className="gap-2">
-                <Linkedin className="w-5 h-5" />
-                LinkedIn Profile
+              <Button variant="secondary" size="lg" className="gap-2" asChild>
+                <a href="https://www.linkedin.com/in/hemanth-kumar-mupparaju" target="_blank" rel="noopener noreferrer">
+                  <Linkedin className="w-5 h-5" />
+                  LinkedIn Profile
+                </a>
               </Button>
             </div>
           </div>
