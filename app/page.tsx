@@ -413,7 +413,7 @@ export default function Portfolio() {
                     variant="outline"
                     size="sm"
                     className="mt-4 gap-2 bg-transparent"
-                    onClick={() => window.open("/certificates/python-data-science.pdf", "_blank")}
+                    onClick={() => window.open("/certificates/ibm-python-certificate.png", "_blank")}
                   >
                     <Certificate className="w-4 h-4" />
                     View Certificate
