@@ -468,14 +468,23 @@ export default function Portfolio() {
               Ready to collaborate on exciting data science projects and innovative solutions
             </p>
 
-            <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <Card className="bg-white/10 border-white/20 text-white hover:bg-white/20 transition-colors cursor-pointer">
                 <CardContent className="p-6 text-center">
                   <a href="mailto:hemanth1672535@gmail.com" className="block">
                     <Mail className="w-8 h-8 mx-auto mb-4" />
-                    <h3 className="font-semibold mb-2">Email</h3>
+                    <h3 className="font-semibold mb-2">Personal Email</h3>
                     <p className="text-blue-100 hover:text-white transition-colors">hemanth1672535@gmail.com</p>
-                    <p className="text-blue-100 hover:text-white transition-colors">#2100080119ai.ds@gmail.com</p>
+                  </a>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white/10 border-white/20 text-white hover:bg-white/20 transition-colors cursor-pointer">
+                <CardContent className="p-6 text-center">
+                  <a href="mailto:2100080119ai.ds@gmail.com" className="block">
+                    <Mail className="w-8 h-8 mx-auto mb-4" />
+                    <h3 className="font-semibold mb-2">Academic Email</h3>
+                    <p className="text-blue-100 hover:text-white transition-colors">2100080119ai.ds@gmail.com</p>
                   </a>
                 </CardContent>
               </Card>
