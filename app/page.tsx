@@ -43,7 +43,7 @@ export default function Portfolio() {
               <h1 className="text-5xl font-bold mb-4">Mupparaju Hemanth Kumar</h1>
               <p className="text-xl text-blue-100 mb-6">Aspiring Data Science Professional</p>
               <p className="text-lg text-blue-50 max-w-2xl mx-auto leading-relaxed">
-                B.Tech AI &amp; Data Science Student | Python Developer 
+                B.Tech AI &amp; Data Science Student | Python Developer
               </p>
             </div>
 
@@ -369,7 +369,11 @@ export default function Portfolio() {
                       </li>
                     </ul>
                     <Button variant="outline" size="sm" className="gap-2 bg-transparent" asChild>
-                      <a href="https://github.com/hemanth1672535" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://github.com/Hemanth1672535/Movie_Seat_Reservation_System/tree/main/Movie_Seat_Reservation_System"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Github className="w-4 h-4" />
                         View Repository
                       </a>
