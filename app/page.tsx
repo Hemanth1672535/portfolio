@@ -48,7 +48,7 @@ export default function Portfolio() {
               </h1>
               <p className="text-xl text-blue-100 mb-6">Aspiring Data Science Professional</p>
               <p className="text-lg text-blue-50 max-w-2xl mx-auto leading-relaxed">
-                B.Tech AI &amp; Data Science Student | Python Developer
+                B.Tech AI &amp; Data Science Student | Python Developer | Data Analyst
               </p>
             </div>
 
@@ -412,7 +412,7 @@ export default function Portfolio() {
                 <CardContent className="p-6">
                   <Code className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                   <h3 className="font-semibold text-lg text-gray-900">Python for Data Science</h3>
-                  <p className="text-sm text-gray-600 mt-2">Click to view certificate</p>
+                  <p className="text-sm text-gray-600 mt-2">Certified by IBM • Click to view</p>
                 </CardContent>
               </Card>
 
