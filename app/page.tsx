@@ -326,7 +326,11 @@ export default function Portfolio() {
                       </li>
                     </ul>
                     <Button variant="outline" size="sm" className="gap-2 bg-transparent" asChild>
-                      <a href="https://github.com/hemanth1672535" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href="https://github.com/Hemanth1672535/car_rental_system"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <Github className="w-4 h-4" />
                         View Repository
                       </a>
