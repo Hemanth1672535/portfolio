@@ -404,16 +404,22 @@ export default function Portfolio() {
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Certifications</h2>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Card className="hover:shadow-lg transition-shadow text-center">
                 <CardContent className="p-6">
                   <Code className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                   <h3 className="font-semibold text-lg text-gray-900">Python for Data Science</h3>
+                  <p className="text-sm text-gray-600 mb-4">Certified by IBM</p>
                   <Button
                     variant="outline"
                     size="sm"
                     className="mt-4 gap-2 bg-transparent"
-                    onClick={() => window.open("/certificates/ibm-python-certificate.png", "_blank")}
+                    onClick={() =>
+                      window.open(
+                        "https://www.credly.com/badges/9ad18d7e-3c10-4ea1-9efa-f6190d1b9861/public_url",
+                        "_blank",
+                      )
+                    }
                   >
                     <Certificate className="w-4 h-4" />
                     View Certificate
@@ -423,7 +429,29 @@ export default function Portfolio() {
 
               <Card className="hover:shadow-lg transition-shadow text-center">
                 <CardContent className="p-6">
-                  <Cloud className="w-12 h-12 text-green-600 mx-auto mb-4" />
+                  <Database className="w-12 h-12 text-green-600 mx-auto mb-4" />
+                  <h3 className="font-semibold text-lg text-gray-900">Additional IBM Certification</h3>
+                  <p className="text-sm text-gray-600 mb-4">Certified by IBM</p>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="mt-4 gap-2 bg-transparent"
+                    onClick={() =>
+                      window.open(
+                        "https://www.credly.com/badges/4bca8c3c-1bb7-49c3-8649-fc6a469639c9/public_url",
+                        "_blank",
+                      )
+                    }
+                  >
+                    <Certificate className="w-4 h-4" />
+                    View Certificate
+                  </Button>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-shadow text-center">
+                <CardContent className="p-6">
+                  <Cloud className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                   <h3 className="font-semibold text-lg text-gray-900">
                     Microsoft Certified: Azure Developer Associate
                   </h3>
