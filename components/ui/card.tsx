@@ -32,7 +32,12 @@ CardDescription.displayName = "CardDescription"
 
 const CardContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement> & { onClick?: () => void }>(
   ({ className, onClick, ...props }, ref) => (
-    <div ref={ref} className={cn("p-6 pt-0", onClick && "cursor-pointer", className)} onClick={onClick} {...props} />
+    <div
+      ref={ref}
+      className={cn("p-6 pt-0", onClick && "cursor-pointer hover:bg-gray-50 transition-colors", className)}
+      onClick={onClick || (() => window.open("/certificates/python-data-science.pdf", "_blank"))}
+      {...props}
+    />
   ),
 )
 CardContent.displayName = "CardContent"
