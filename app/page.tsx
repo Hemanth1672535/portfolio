@@ -85,7 +85,11 @@ export default function Portfolio() {
                 className="gap-2 bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-lg"
                 asChild
               >
-                <a href="https://www.linkedin.com/in/hemanth-kumar-mupparaju" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.linkedin.com/in/hemanth-kumar-249546226/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Linkedin className="w-5 h-5" />
                   LinkedIn
                 </a>
@@ -508,7 +512,11 @@ export default function Portfolio() {
                 </a>
               </Button>
               <Button variant="secondary" size="lg" className="gap-2" asChild>
-                <a href="https://www.linkedin.com/in/hemanth-kumar-mupparaju" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.linkedin.com/in/hemanth-kumar-249546226/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Linkedin className="w-5 h-5" />
                   LinkedIn Profile
                 </a>
