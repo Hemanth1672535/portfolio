@@ -405,14 +405,19 @@ export default function Portfolio() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">
-              <Card
-                className="hover:shadow-lg transition-shadow text-center cursor-pointer"
-                onClick={() => window.open("/certificates/python-data-science.pdf", "_blank")}
-              >
+              <Card className="hover:shadow-lg transition-shadow text-center">
                 <CardContent className="p-6">
                   <Code className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                   <h3 className="font-semibold text-lg text-gray-900">Python for Data Science</h3>
-                  <p className="text-sm text-gray-600 mt-2">Certified by IBM • Click to view</p>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="mt-4 gap-2 bg-transparent"
+                    onClick={() => window.open("/certificates/python-data-science.pdf", "_blank")}
+                  >
+                    <Certificate className="w-4 h-4" />
+                    View Certificate
+                  </Button>
                 </CardContent>
               </Card>
 
