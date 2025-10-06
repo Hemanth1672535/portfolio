@@ -1,5 +1,6 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -19,17 +20,146 @@ import {
   BookOpen,
   Wrench,
   FolderOpen,
-  BadgeIcon as Certificate,
+  Briefcase as Certificate,
   Users,
   MessageCircle,
   Clock,
+  Menu,
+  X,
+  Home,
+  User,
+  Folder,
 } from "lucide-react"
 
 export default function Portfolio() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState("home")
+
+  const navItems = [
+    { id: "home", label: "Home", icon: Home },
+    { id: "about", label: "About", icon: User },
+    { id: "portfolio", label: "Portfolio", icon: Folder },
+    { id: "contact", label: "Contact", icon: Mail },
+  ]
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = [
+        { id: "home", element: document.getElementById("home") },
+        { id: "about", element: document.getElementById("about") },
+        { id: "portfolio", element: document.getElementById("education") },
+        { id: "contact", element: document.getElementById("contact") },
+      ]
+
+      const scrollPosition = window.scrollY + 150
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i]
+        if (section.element && section.element.offsetTop <= scrollPosition) {
+          setActiveSection(section.id)
+          break
+        }
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  const scrollToSection = (sectionId: string) => {
+    let targetId = sectionId
+    if (sectionId === "portfolio") {
+      targetId = "education"
+    }
+
+    const element = document.getElementById(targetId)
+    if (element) {
+      const navHeight = 80
+      const elementPosition = element.offsetTop - navHeight
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth",
+      })
+    }
+    setIsMenuOpen(false)
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+      {/* Navigation Bar */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between h-20">
+            {/* Logo */}
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">HK</span>
+              </div>
+              <div className="hidden sm:block">
+                <h1 className="text-xl font-bold text-gray-900">Hemanth Kumar</h1>
+                <p className="text-sm text-gray-600">Data Science Professional</p>
+              </div>
+            </div>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-2">
+              {navItems.map((item) => {
+                const Icon = item.icon
+                return (
+                  <button
+                    key={item.id}
+                    onClick={() => scrollToSection(item.id)}
+                    className={`flex items-center space-x-2 px-6 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
+                      activeSection === item.id
+                        ? "bg-blue-100 text-blue-700 shadow-sm"
+                        : "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
+                    }`}
+                  >
+                    <Icon className="w-4 h-4" />
+                    <span>{item.label}</span>
+                  </button>
+                )
+              })}
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden p-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-gray-50 transition-colors"
+            >
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+
+          {/* Mobile Navigation */}
+          {isMenuOpen && (
+            <div className="md:hidden py-4 border-t border-gray-200 bg-white/95 backdrop-blur-md">
+              <div className="flex flex-col gap-2">
+                {navItems.map((item) => {
+                  const Icon = item.icon
+                  return (
+                    <button
+                      key={item.id}
+                      onClick={() => scrollToSection(item.id)}
+                      className={`flex items-center space-x-3 px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
+                        activeSection === item.id
+                          ? "bg-blue-100 text-blue-700 shadow-sm"
+                          : "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
+                      }`}
+                    >
+                      <Icon className="w-5 h-5" />
+                      <span>{item.label}</span>
+                    </button>
+                  )
+                })}
+              </div>
+            </div>
+          )}
+        </div>
+      </nav>
+
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
+      <section id="home" className="relative bg-gradient-to-r from-blue-600 to-purple-700 text-white pt-32 pb-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="mb-6">
@@ -107,7 +237,7 @@ export default function Portfolio() {
       </section>
 
       {/* Career Objective */}
-      <section className="py-16">
+      <section id="about" className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -129,7 +259,7 @@ export default function Portfolio() {
       </section>
 
       {/* Education */}
-      <section className="py-16 bg-white">
+      <section id="education" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -209,7 +339,7 @@ export default function Portfolio() {
       </section>
 
       {/* Technical Skills */}
-      <section className="py-16">
+      <section id="skills" className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -287,7 +417,7 @@ export default function Portfolio() {
       </section>
 
       {/* Projects */}
-      <section className="py-16 bg-white">
+      <section id="projects" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -396,7 +526,7 @@ export default function Portfolio() {
       </section>
 
       {/* Certifications */}
-      <section className="py-16">
+      <section id="certifications" className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -428,10 +558,6 @@ export default function Portfolio() {
               </Card>
 
               <Card className="hover:shadow-lg transition-shadow text-center">
-                
-              </Card>
-
-              <Card className="hover:shadow-lg transition-shadow text-center">
                 <div className="p-6">
                   <Cloud className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                   <h3 className="font-semibold text-lg text-gray-900">
@@ -452,7 +578,7 @@ export default function Portfolio() {
       </section>
 
       {/* Virtual Internships */}
-      <section className="py-16 bg-white">
+      <section id="experience" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -508,7 +634,7 @@ export default function Portfolio() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+      <section id="contact" className="py-16 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-8">Let's Connect</h2>
@@ -573,7 +699,7 @@ export default function Portfolio() {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-gray-400">© 2024 Mupparaju Hemanth Kumar. All rights reserved.</p>
+          <p className="text-gray-400">© 2025 Mupparaju Hemanth Kumar. All rights reserved.</p>
         </div>
       </footer>
     </div>
