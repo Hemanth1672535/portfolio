@@ -176,9 +176,9 @@ export default function Portfolio() {
               >
                 Mupparaju Hemanth Kumar
               </h1>
-              <p className="text-xl text-blue-100 mb-6">Aspiring Data Science Professional</p>
+              <p className="text-xl text-blue-100 mb-6">Aspiring Data Analyst Professional</p>
               <p className="text-lg text-blue-50 max-w-2xl mx-auto leading-relaxed">
-                B.Tech AI &amp; Data Science Student | Python Developer | Data Analyst
+                B.Tech Artificial intelligence &amp; Data Science Student           
               </p>
             </div>
 
